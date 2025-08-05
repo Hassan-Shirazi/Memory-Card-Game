@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="controls">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy (2x3)</option>
+            <option value="medium" selected>Medium (4x4)</option>
+            <option value="hard">Hard (4x5)</option>
+            <option value="expert">Expert (5x6)</option>
+        </select>
+        <button id="startGameBtn">Start Game</button>
+    </div>
+
+    <div class="stats">
+        <div>Moves: <span id="moves-count">0</span></div>
+        <div>Time: <span id="time-taken">0s</span></div>
+    </div>
+
+    <div class="game-board" id="game-board">
+        <!-- Cards will be generated here by JavaScript -->
+    </div>
+
+    <div class="game-over-modal" id="gameOverModal">
+        <div class="game-over-content">
+            <h2>Game Over!</h2>
+            <p>Total Moves: <span id="final-moves">0</span></p>
+            <p>Time Taken: <span id="final-time">0s</span></p>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
